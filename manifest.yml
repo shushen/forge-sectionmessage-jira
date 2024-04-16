@@ -1,0 +1,25 @@
+modules:
+  jira:adminPage:
+    - key: sectionmessage-jira-test-hello-world-admin-page
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: SectionMessage Jira Test
+  confluence:globalSettings:
+    - key: sectionmessage-confluence-test-hello-world-global-settings
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: SectionMessage Confluence Test
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  id: ari:cloud:ecosystem::app/9c6ae400-9108-474f-bd65-10e5170851fc
+  runtime:
+    name: nodejs18.x
