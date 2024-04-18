@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ForgeReconciler, {
   Text,
   SectionMessage,
+  LinkButton,
   SectionMessageAction,
 } from "@forge/react";
 import { invoke } from "@forge/bridge";
@@ -28,6 +29,9 @@ const App = () => {
         <Text>Warning message</Text>
       </SectionMessage>
       <Text>{data ? data : "Loading..."}</Text>
+      <LinkButton onClick={() => console.log("LinkButton clicked")}>
+        Link Button
+      </LinkButton>
     </>
   );
 };
